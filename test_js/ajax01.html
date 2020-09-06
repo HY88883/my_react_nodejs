@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="demo"></p>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function () {
+            // 输出接收到的文字数据
+            document.getElementById("demo").innerHTML=xhr.responseText;
+        }
+
+        xhr.onerror = function () {
+            document.getElementById("demo").innerHTML="请求出错";
+        }
+        // 发送异步 GET 请求
+        xhr.open("GET", "https://www.runoob.com/try/ajax/ajax_info.txt", true);
+        xhr.send();
+    </script>
+</body>
+</html>

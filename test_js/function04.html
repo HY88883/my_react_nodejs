@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            background-color: coral;
+            border: 1px solid;
+            padding: 50px;
+        }
+        #myDIV {
+            background-color: coral;
+            border: 1px solid;
+            padding: 50px;
+            color: white;
+        }
+    </style>
+    <script>
+      /*  window.addEventListener("resize", function(){
+            document.getElementById("demo").innerHTML = Math.random();
+        });
+        document.getElementById("myP").addEventListener("click", function() {
+            alert("你点击了 P 元素!");
+        }, false);
+        document.getElementById("myDiv").addEventListener("click", function() {
+            alert(" 你点击了 DIV 元素 !");
+        }, false);
+        document.getElementById("myP2").addEventListener("click", function() {
+            alert("你点击了 P2 元素!");
+        }, true);
+        document.getElementById("myDiv2").addEventListener("click", function() {
+            alert("你点击了 DIV2 元素 !");
+        }, true);*/
+    /* window.onload=function () {
+         document.getElementById("myDIV").addEventListener("mousemove", myFunction);
+         function myFunction() {
+             document.getElementById("demo").innerHTML = Math.random();
+         }
+         function removeHandler() {
+             document.getElementById("myDIV").removeEventListener("mousemove", myFunction);
+         }
+     }*/
+
+         /*var para = document.createElement("p");
+         var text = document.createTextNode('你好');
+         para.appendChild(text);
+         var arr = document.getElementsByTagName('p')
+         console.log(arr[1])*/
+        /* function A() {
+             this.name = name
+             this.myfunc = ()=>{
+                 alert(this.name)
+                 return this.name
+             }
+         }
+         A.prototype.sayname = ()=>{
+             alert(this.name)
+         }
+         function B(name) {
+            A.call(this,name)
+         }
+         B.prototype = new A('jack')
+     }*/
+      window.onload=()=> {
+          /*console.log(Object.getPrototypeOf(Object.prototype))
+          console.log(Boolean.prototype.isPrototypeOf(false))
+          function A(){return 'nihao'};
+          var a=new A();
+          console.log(a.constructor); //A()
+          console.log(a.constructor===A.prototype.constructor);//true
+          console.log(null instanceof Object)
+          console.log(undefined instanceof Object)*/
+          function Fun(a, b) {
+              this.a = a;
+              this.b = b;
+          }
+
+// 原型属性定义方法
+          Fun.prototype.c = function() {
+              return this.a + this.b;
+          }
+          // console.log(new Fun(1,5).c())
+          function Fn() {};
+// 定义属性
+          Fn.prototype.a = 1;
+          Fn.prototype.b = 2;
+
+// 字面量定义方法，原型被重写，原有属性和方法被更新
+          Fn.prototype.c = {
+              c : function() {
+                  return this.a + this.b;
+              }
+          }
+          console.log(new Fn().c.c())/*// 构造器内定义属性
+
+*/
+          function Students(name, height, age) {
+              this.name = name;
+              this.height = height;
+              this.age = age;
+              this.outputInfo  = function() {
+                  document.write('name = ' + this.name +  '<br\>' + 'height = ' + this.height + '<br\>');
+              }
+          }
+
+//增加一个新方法
+          Students.prototype.newFunction = function() {
+              document.write('此方法是通过prototype继承后实现的');
+          }
+
+          var stu1 = new Students('zhang', 123, 12);
+          stu1.outputInfo();
+          stu1.newFunction();
+      }
+    </script>
+</head>
+<body>
+<!--<p>实例在 window 对象中使用 addEventListener() 方法。</p>
+<p>尝试重置浏览器的窗口触发 "resize" 事件句柄。</p>
+<p id="demo"></p>
+<p>实例演示了在添加不同事件监听时，冒泡与捕获的不同。</p>
+<div id="myDiv">
+    <p id="myP">点击段落，我是冒泡。</p>
+</div><br>
+<div id="myDiv2">
+    <p id="myP2">点击段落，我是捕获。 </p>
+</div>-->
+<!--<div id="myDIV"> div 元素添加了 onmousemove 事件句柄，鼠标在桔红色的框内移动时会显示随机数。
+    <p>点击按钮移除 DIV 的事件句柄。</p>
+    <p id="1">ni</p>
+    <p id="2">hao</p>
+    <button onclick="removeHandler()" id="myBtn">点我</button>
+</div>
+<p id="demo"></p>-->
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="checkCookies()">
+<p id="demo">点击这个按钮，来调用带参数的函数。</p>
+<button onclick="myFunction('Harry Potter','Wizard')">点击这里</button>
+<button onClick={getElementById('demo').innerHTML=Date()}>现在的时间是?</button>
+<button onclick="this.innerHTML=Date()">现在的时间是?</button>
+<button onClick="this.style.display='none'">
+    点我后我就消失了
+</button>
+<h1 onclick="this.innerHTML='Ooops!'">点击文本!</h1>
+输入你的名字: <input type="text" id="fname" onchange="changeFunction()">
+<p>当你离开输入框后，函数将被触发，将小写字母转为大写字母。</p>
+<script>
+    function changeFunction(){
+        var x=document.getElementById("fname");
+        x.value=x.value.toUpperCase();
+    }
+    function checkCookies() {
+        if(navigator.cookieEnabled==true){
+            alert('cookies 可用')
+        }else {
+            alert('cookies 不可用')
+        }
+    }
+    /*function myFunction(name,job){
+        alert("Welcome " + name + ", the " + job);
+    }*/
+    var var1 = 1; // 不可配置全局属性
+    var2 = 2; // 没有使用 var 声明，可配置全局属性
+
+    console.log(this.var1); // 1
+    console.log(window.var1); // 1
+    console.log(window.var2); // 2
+
+    delete var1; // false 无法删除
+    console.log(var1); //1
+
+    /*var d=new Date().getDay();
+    switch (d) {
+        case 6:alert(6);break;
+        case 7:alert(7);break;
+        default:alert('haha');
+
+    }*/
+
+    // alert(typeof function () {})
+    // alert({name:'John', age:34}.constructor)
+    function isArray(my) {
+        return my.constructor.toString().indexOf("Array") > -1;
+    }
+    // alert(isArray(['faf','fawfe','fint']));
+   /* String(false)        // 返回 "false"
+    String(true)         // 返回 "true"
+    var y = "5";      // y 是一个字符串
+    var x = + y;      // x 是一个数字
+    // alert(x)
+    d=new Date();
+    alert(Number(d));
+    myVar = [1,2,3,4];
+    alert(myVar);*/
+    var str = "Visit Runoob!";
+    var n = str.search(/Runoob/i);
+    console.log('ha:'+n);
+    var array1 = /e/.exec("The best things in life are free!");
+    console.log(array1)
+
+    var txt="";
+    function message()
+    {
+        try {
+            adddlert("Welcome guest!");
+        } catch(err) {
+            txt="本页有一个错误。\n\n";
+            txt+="错误描述：" + err.message + "\n\n";
+            txt+="点击确定继续。\n\n";
+            alert(txt);
+        }
+    }
+    // message();
+    var addsum;
+    function myError() {
+        try{
+            if(typeof addsum==='undefined')throw '变量未定义';
+        }catch(error){
+            alert(error);
+        }
+    }
+    // myError();
+    // "use strict";
+    // x = 3.14;       // 报错 (x 未定义)
+    "use strict";
+    // myFunction();
+
+    /*function myFunction() {
+        y = 3.14;   // 报错 (y 未定义)
+    }*/
+    for (var i = 0; i < 10; i++) {
+        // some code
+    }
+    console.log(i);
+    // alert(this);
+
+</script>
+</body>
+</html>

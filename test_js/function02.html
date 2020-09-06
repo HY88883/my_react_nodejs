@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>点击以下链接查看结果：</p>
+<a href="void alert('Warning!!!')">点我!</a>
+<a href="javascript:void(0);">点我没有反应的!</a>
+<a href="#pos">点我定位到指定位置!</a>
+<br>
+...
+<br>
+<p id="pos">尾部定位点</p>
+    <script>
+        var person={
+            fullname: function () {
+                return this.firstname+' '+this.lastname;
+            }
+        }
+        var person1={
+            firstname: 'hu',
+            lastname: 'yong'
+        }
+        person.fullname.call(person1);
+        {
+            let x=5;
+        }
+        // console.log(x);
+    var b=1;
+        {
+            let b=2;
+        }
+        console.log(b);
+    var quanju=50;
+    // alert(window.quanju);
+        let letvar=60;
+        // alert(letvar);
+        var x = 10;
+        // 这里输出 x 为 10
+        {
+            const x = 2;
+            // 这里输出 x 为 2
+        }
+        // console.log(x);
+        const car = {type:"Fiat", model:"500", color:"white"};
+        car.color='red';
+        car.owner='huyong';
+        // for(var x in car){
+        //     console.log(x+':'+car[x]);
+        // }
+        const cars = ["Saab", "Volvo", "BMW"];
+        cars.push('huyong');
+        cars[0]='haha';
+        cars.forEach((e)=>{console.log(e)});
+        // constvar='4234';
+        // const constvar;
+        var text = '{ "sites" : [' +
+            '{ "name":"Runoob" , "url":"www.runoob.com" },' +
+            '{ "name":"Google" , "url":"www.google.com" },' +
+            '{ "name":"Taobao" , "url":"www.taobao.com" } ]}';
+        console.log(JSON.parse(text));
+        console.log(JSON.stringify(JSON.parse(text)));
+
+    </script>
+</body>
+</html>

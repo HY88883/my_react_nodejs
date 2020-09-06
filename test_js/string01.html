@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<div id="example"></div>-->
+<div id="demo"></div>
+<!--<p id="demo">单击按钮创建一个数组,调用 ucase（）方法, 并显示结果。</p>
+<button onclick="myFunction()">点我</button>
+<p id="demo">点击按钮将数组作为字符串输出。</p>
+<button onclick="myFunction()">点我</button>-->
+    <script>
+        /*var str="Hello world, welcome to the universe.";
+        var n=str.indexOf("world");
+        // console.log(n)
+        var str="Hello world!";
+        document.write(str.match("world") + "<br>");
+        document.write(str.match("World") + "<br>");
+        document.write(str.match("world!"));    
+        var txt="a,b,c,d,e"
+        var arrstr = txt.split(',')
+        arrstr.forEach((value)=>{
+            console.log(value)
+        })
+        Array.prototype.myUcase=function(){
+            for (i=0;i<this.length;i++){
+                this[i]=this[i].toUpperCase();
+            }
+        }
+        function myFunction(){
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits.myUcase();
+            var x=document.getElementById("demo");
+            x.innerHTML=fruits;
+        }
+        function myFunction(){
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            var x=document.getElementById("demo");
+            x.innerHTML=fruits.join();
+            console.log(typeof fruits.join())
+        }*/
+        /*var str1 = "Visit RUnoob";
+        var patt1 = /runoob/i;
+        // document.write(str1.match(patt1));
+        var str2="Is this all there is?";
+        var patt2=/is/gi;
+        const arr = str2.match(patt2)
+        // document.write(arr);
+        document.write(Array.prototype.isPrototypeOf(arr))
+        const vari1 = new Array()*/
+        // document.write(typeof vari1)
+        // console.log(location.hostname,location.pathname,location.port,location.protocol,location.href)
+        txt = "<p>浏览器代号: " + navigator.appCodeName + "</p>";
+        txt+= "<p>浏览器名称: " + navigator.appName + "</p>";
+        txt+= "<p>浏览器版本: " + navigator.appVersion + "</p>";
+        txt+= "<p>启用Cookies: " + navigator.cookieEnabled + "</p>";
+        txt+= "<p>硬件平台: " + navigator.platform + "</p>";
+        txt+= "<p>用户代理: " + navigator.userAgent + "</p>";
+        txt+= "<p>用户代理语言: " + navigator.systemLanguage + "</p>";
+        // document.getElementById("example").innerHTML=txt;
+        /*var person = prompt('请输入你的名字','胡勇')
+        if(person != null && person != '')  {
+            x = '你好'+person;
+            document.getElementById("demo").innerHTML=x;
+        }*/
+        // alert('你好\n胡勇')
+        /*var myVar=setInterval(function(){myTimer()},1000);
+        function myTimer() {
+            var date = new Date()
+            var timestr = date.toLocaleTimeString()
+            document.getElementById("demo").innerHTML=timestr;
+        }*/
+        var c = document.cookie;
+        document.write(c)
+    </script>
+</body>
+</html>

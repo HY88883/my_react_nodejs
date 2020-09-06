@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>我的 Web 页面</h1>
+<p id="demo">一个段落</p>
+<button type="button" onclick="myFunction()">尝试一下</button>
+
+<script src="./test01.js"></script>
+<script>
+    // window.alert(5 + 6);
+    // document.getElementById('demo').innerHTML = function myFunction(a, b) { return a * b;};
+    // document.write(Date());
+    // var x, length
+    // x=6
+    // length=5
+// console.log(typeof ('hello'+15))
+    document.write('你好\
+    世界！');
+    // var x,y,z=1;
+    // alert(x)
+    /*var carname="Volvo";
+    var carname;
+    alert(carname)*/
+   /* y=5;
+    x=y+2;
+    alert(x)*/
+    /*var cars=new Array();
+    cars[0]="Saab";
+    cars[1]="Volvo";
+    cars[2]="BMW";*/
+    /*var cars=new Array("Saab","Volvo","BMW");
+    var person={
+        firstname : "John",
+        lastname  : "Doe",
+        id        :  5566
+    };*/
+    // alert(person.firstname+' '+person['firstname'])
+    // alert(cars)
+
+    var person={
+        name1: 'hu',
+        name2: 'yong',
+        id: 055,
+        fullName: function(){
+            return this.name1+' '+this.name2;
+        }
+    }
+    // document.getElementById('demo').innerHTML="不加括号输出函数表达式："  + person.fullName;
+    document.getElementById('demo').innerHTML="加括号输出函数表达式："  + person.fullName();
+</script>
+</body>
+</html>

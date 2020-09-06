@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function myFunction(){
+            var x=document.getElementById("fname");
+            x.value=x.value.toUpperCase();
+        }
+        function mOver(obj){
+            obj.innerHTML="Thank You"
+        }
+        function mOut(obj){
+            obj.innerHTML="Mouse Over Me"
+        }
+        function lighton(){
+            document.getElementById('myimage').src="bulbon.gif";
+        }
+        function lightoff(){
+            document.getElementById('myimage').src="bulboff.gif";
+        }
+        function mymessage(){
+            alert("消息在 onload 事件触发后弹出。");
+        }
+        function myFocus(obj) {
+            obj.style.background = 'yellow';
+        }
+        element.addEventListener("click", function(){ alert("Hello World!"); });
+    </script>
+</head>
+<body onload="mymessage()">
+
+输入你的名字: <input type="text" id="fname" onchange="myFunction()">
+<p>当你离开输入框后，函数将被触发，将小写字母转为大写字母。</p>
+<div onmouseover="mOver(this)" onfocus="myFocus(this)" onmousedown="lighton()" onmouseup="lightoff()" onmouseout="mOut(this)" style="background-color:#D94A38;width:120px;height:20px;padding:40px;">Mouse Over Me</div>
+<p>该实例使用 addEventListener() 方法在按钮中添加点击事件。 </p>
+<button id="myBtn">点我</button>
+</body>
+</html>
