@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    /*const tfboys = ['haha','nihao','yuwen']
+    /!*let chunwan = (...rest)=>{
+        console.log(rest,tfboys,typeof rest,typeof tfboys)
+    }*!/
+    let chunwan = function(...rest){
+        // console.log(adrguments.length,arguments[0],typeof arguments)
+        console.log(arguments instanceof Array,rest[0])
+
+    }
+    chunwan(...tfboys)*/
+    // let arr = [],o={},str='nihao',n=6,i=Infinity
+    /*let o=null,str='',n=undefined
+    console.log(!!o,!!str,!!n)*/
+    /*const arr = ['唐僧','猪八戒','沙僧','孙悟空']
+    for(let i of arr){
+        console.log(i)
+    }*/
+   /* const o = {
+        name: '西游记',
+        person: ['唐僧','猪八戒','沙僧','孙悟空'],
+        [Symbol.iterator](){
+            let index = 0
+            return {//指针对象
+                next: ()=>{
+                    if(index<this.person.length){
+                        const result = {value: this.person[index],done: false}
+                        index++
+                        return result
+                    }else{
+                        return {value: undefined,done: true}
+                    }
+                }
+            }
+        }
+    }
+    for(let per of o){
+        console.log(per)
+    }*/
+    function* weather() {
+        //<------
+        let r1 = yield '天气真好'
+        console.log(r1)
+        yield '今天下雨'
+        yield '今天出太阳'
+    }
+    console.log(weather())
+    let result = weather()
+    console.log(result.next().value)
+    console.log(result.next('BBBB').value)
+    console.log(result.next().value)
+    console.log(result.next().value)
+
+</script>
+<body>
+
+</body>
+</html>

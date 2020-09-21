@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function func1() {
+            setTimeout(()=>{
+                console.log('1111')
+                iterator.next()
+            },1000)
+        }
+        function func2() {
+            setTimeout(()=>{
+                console.log('2222')
+                iterator.next()
+            },2000)
+        }
+        function func3() {
+            setTimeout(()=>{
+                console.log('3333')
+                iterator.next()
+            },3000)
+        }
+
+        function* gen(){
+            yield func1()
+            yield func2()
+            yield func3()
+
+        }
+        let iterator = gen()
+        iterator.next()
+    </script>
+</body>
+</html>

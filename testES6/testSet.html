@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*let s = new Set()
+    console.log(s)
+    let s1 = new Set(['1','2','4','5'])
+    console.log(s1)
+    for(let v of s1){
+        console.log(v)
+    }*/
+   /* let m = new Map()
+    m.set('name',function () {
+        console.log('xtu')
+    })
+    let city={
+        name: '湘潭'
+    }
+    m.set(city,['xt','cs','sh'])
+    for(let v of m){
+        console.log(v)
+    }*/
+   /*class Phone{
+       constructor(a,b) {
+           this.a=a
+           this.b=b
+       }
+       name='huawei'
+       change(){
+           console.log('真的好用！')
+       }
+   }
+   let hy = new Phone('ni','hao')
+    console.log(hy.name)
+    hy.change()
+   console.log(hy.a,hy.b)*/
+    class staticP{
+       static n1='iloveyou'
+        static func(){
+           console.log('static function()')
+        }
+    }
+    console.log(staticP.n1)
+    staticP.func()
+    let s = new staticP()
+    console.log(s.n1)
+</script>
+</body>
+</html>
